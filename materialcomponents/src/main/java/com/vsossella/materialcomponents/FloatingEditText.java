@@ -5,12 +5,10 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.nfc.Tag;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -336,5 +334,9 @@ public class FloatingEditText extends RelativeLayout {
     public void setEditTextValue(String value) {
         editTextValue = value;
         getEditText().setText(value);
+    }
+
+    public void setTextChangedListener(TextWatcher textChangedListener) {
+        editText.addTextChangedListener(textChangedListener);
     }
 }
