@@ -335,8 +335,4 @@ public class FloatingEditText extends RelativeLayout {
         editTextValue = value;
         getEditText().setText(value);
     }
-
-    public void setTextChangedListener(TextWatcher textChangedListener) {
-        editText.addTextChangedListener(textChangedListener);
-    }
 }
